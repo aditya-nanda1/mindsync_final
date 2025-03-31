@@ -10,7 +10,7 @@ export async function sendAlertEmail(word, count, user, timestamp) {
     : `${user.name} (${user.age}, ${user.gender})`;
 
   const templateParams = {
-    to_email: 'postman826077@gmail.com',
+    to_email: 'anuragamlan41@gmail.com',
     word,
     count,
     user_info: userInfo,

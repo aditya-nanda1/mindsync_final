@@ -40,7 +40,7 @@ class SelfHarmMonitor {
   async sendAlert(word, count, user) {
     try {
       const templateParams = {
-        to_email: 'postman826077@gmail.com', // Replace with your email
+        to_email: 'anuragamlan41@gmail.com', // Replace with your email
         word,
         count,
         user_info: 'Anonymous User', // Replace with actual user info if available
@@ -48,10 +48,10 @@ class SelfHarmMonitor {
       };
 
       await emailjs.send(
-        'service_ibp6mpe', // Replace with your service ID
-        'template_dsvd5kl', // Replace with your template ID
+        'service_at9lejs', // Replace with your service ID
+        'template_kismt0q', // Replace with your template ID
         templateParams,
-        'Rae8HdbL0CAGYhGjE' // Replace with your public key
+        'CzuZwmVWD9l0OajTW' // Replace with your public key
       );
       
       return true;
@@ -100,7 +100,7 @@ export const ChatBot = () => {
   const messagesEndRef = useRef(null);
   const [showSuggestions, setShowSuggestions] = useState(true);
 
-  const API_KEY = 'AIzaSyDfXpZvVm-PnV7Scs9ervNBmVdKR-JFnL4';
+  const API_KEY = 'AIzaSyCxwaT0uMr2NHf_Bwe2wVV_B4gHCXOI5pE';
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
   useEffect(() => {
@@ -201,13 +201,20 @@ export const ChatBot = () => {
       const systemPrompt = {
         role: 'user',
         parts: [{
-          text: `You are MindSync, a mental health assistant. Guidelines:
-1. Keep responses medium-length (3-5 sentences max)
-2. Use **bold** for key points
-3. Be empathetic and ask thoughtful follow-up questions
-4. When appropriate, suggest breaking problems into smaller parts
-5. End with a relevant question to continue the conversation
-6. For urgent concerns, recommend professional help
+          text: `You are MindSync, a mental health assistant created by the MindSync team. Guidelines:
+      1. **Keep responses supportive and concise** (3-5 sentences)
+      2. Use **bold** to highlight important insights
+      3. **Show empathy** and ask meaningful follow-up questions
+      4. Suggest **breaking challenges into smaller steps** when overwhelmed
+      5. Always end with a **relevant question** to encourage reflection
+      6. **Prioritize safety** - recommend professional help for urgent concerns
+      7. If asked about your identity: 
+         - "I'm MindSync, here to support you"
+         - "The MindSync team created me to help with mental wellbeing"
+         - Never reference other AI systems or companies
+      
+      **Remember:** Your role is to be a compassionate listener who helps users organize their thoughts. Begin by asking how they're feeling today.
+
 
 Current conversation:`
         }]

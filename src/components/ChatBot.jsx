@@ -100,7 +100,7 @@ export const ChatBot = () => {
   const messagesEndRef = useRef(null);
   const [showSuggestions, setShowSuggestions] = useState(true);
 
-  const API_KEY = 'AIzaSyCxwaT0uMr2NHf_Bwe2wVV_B4gHCXOI5pE';
+  const API_KEY = import.meta.env.VITE_GEMINI_API_KEY; // Replace with your API key
   const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
   useEffect(() => {
